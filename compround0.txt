@@ -1,0 +1,59 @@
+// Build one hand for round 0
+string Board::doCompFirstHand()
+{
+    // get a random alpha for the first letter of a word, find a word beginning with it and remove it from bag after playing it.
+    std::random_device rdev;
+    std::uniform_int_distribution<int> dist(0,alphas.size());
+    std::mt19937 mt(rdev());
+    int choice = dist(mt);
+    char randAlpha = alphas.at(choice);
+    vector<string> wordVec = dict.getAlphaWordList(randAlpha);
+
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::default_random_engine rn(seed);
+    std::shuffle(std::begin(wordVec), std::end(wordVec), rn);
+    // Stop when a word of the right length is found, needed for a valid first move.
+    string word;
+    for (int i = 0; i < wordVec.size(); i++)
+    {
+        if(wordVec[i].length() >= 2 && wordVec[i].length() <= 7 )
+        {
+            word = wordVec[i];
+            break;
+        }
+    }
+    // Shrink vector keeping 7,7 as the center coordinate, and centering the row.
+    vector<string>row = {"[7,4]","[7,5]","[7,6]","[7,7]","[7,8]","[7,9]","[7,10]"};
+    int loopRuns = row.size() - word.length();
+    while( loopRuns > 0 )
+    {
+        row.erase(row.begin() );
+        loopRuns--;
+        row.erase(row.end() );
+        loopRuns--;
+    }
+    // update the board
+    for(int i = 0; i < word.length(); i++)
+    {
+        string letter(1, word[i]);
+        updateBoard(row[i], letter, "add" );
+    }
+    // Set the score for the move
+    int score;
+    for(int i = 0; i < word.size(); i++)
+    {
+        string letter(1, word[i]);
+        score += gameScoreBoard->getLetterValue(letter);
+    }
+    // Make a playerMoves vector just for scoring.
+    vector<vector<string>> playerMoves;
+    for(int index = 0; index < word.length(); index++)
+        playerMoves.push_back(  {row[index], word.substr(index,1)}  );
+
+    int modifiedScore = gameScoreBoard->postScoreBonusComp(playerMoves, score);
+    gameScoreBoard->setBoardScore(modifiedScore, COMPUTER_PLAYER_TAG);
+    // Mimic what usually happens in main after checkValidMoves is true (it is skipped here) by meging the boards.
+    mergeBoards();
+    // return the word to main so it can be removed from bag.
+    return word;
+}

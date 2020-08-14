@@ -1,0 +1,164 @@
+#mainWIndow {
+  background-image: radial-gradient(ellipse at center, green 70%, black 90%);
+  font: 18px "Monospace","Courier","Consolas";
+}
+#menu {
+  background-color: rgba(61,174,61,1);
+}
+#gameBoardGrid {
+  background-size: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 4px 4px 4px alpha(black, 0.5) inset;
+  border: solid 1px alpha(black, 0.7);
+}
+
+#boardButton {
+  background-image: radial-gradient(ellipse at center, rgb(61,174,61) 100%, gray 0%);
+  box-shadow: 3px 3px 5px alpha(black, 0.5) inset;
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px; 
+  
+}
+#boardButtonRed {
+  background-image: radial-gradient(ellipse at center, rgb(237,39,39) 100%, gray 0%);
+  box-shadow: 3px 3px 5px alpha(black, 0.5) inset;
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px;
+  
+}
+#boardButtonPink {
+  background-image: radial-gradient(ellipse at center, rgb(219,121,206) 100%, gray 0%);
+  box-shadow: 3px 3px 5px alpha(black, 0.5) inset;
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px;  
+}
+#boardButtonLightBlue {
+  background-image: radial-gradient(ellipse at center, rgb(128,243,239) 100%, gray 0%);
+  box-shadow: 3px 3px 5px alpha(black, 0.5) inset;
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px;  
+}
+#boardButtonDarkBlue {
+  background-image: radial-gradient(ellipse at center, rgb(29,79,222) 100%, gray 0%);
+  box-shadow: 3px 3px 5px alpha(black, 0.5) inset;
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px;  
+}
+
+
+#boardButtonYellow{
+  background-image: radial-gradient(ellipse at center, rgb(235,237,59) 70%, gray 100%);
+  box-shadow: rgba(0,0,0,0.7) 2px 2px;
+  border: solid 1px alpha(black, 0.7);
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px;  
+  color:black
+}
+
+
+#playerButton {
+  background-image: radial-gradient(ellipse at center, rgb(235,237,59) 70%, gray 100%);
+  box-shadow: rgba(0,0,0,0.4) 4px 4px;
+  border: solid 1px alpha(black, 0.7);
+  padding-top: 5px; 
+  padding-right: 2px;
+  padding-left: 4px;
+  padding-bottom: 4px; 
+  color: black 
+}
+
+#infoLabelScore {
+  padding: 2px;
+  color: white;
+  font: 18px "Monospace","Courier","Consolas";
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-shadow: rgba(0,0,0,0.4) 3px 3px;
+  font-style: italic;
+}
+
+
+#playerButtonGridBox {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#playHandButton {
+  box-shadow: rgba(0,0,0,0.4) 4px 4px;
+  background-image: radial-gradient(ellipse at center, rgb(235,237,59) 70%, gray 100%);
+  border: solid 1px alpha(black, 0.7);
+  color:black
+}  
+#passButton{
+  box-shadow: rgba(0,0,0,0.4) 4px 4px;
+  background-image: radial-gradient(ellipse at center, rgb(235,237,59) 70%, gray 100%);
+  border: solid 1px alpha(black, 0.7);
+  color:black
+}
+#boxPassPlay{
+  margin-bottom: 10px;
+}
+#hiddenAlphaTileBox{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#hiddenAlphaTile {
+  background-image: radial-gradient(ellipse at center, rgb(235,237,59) 70%, gray 100%);
+  box-shadow: rgba(0,0,0,0.4) 3px 3px;
+  border: solid 1px alpha(black, 0.7);
+  color:black
+}
+#dialogMain {
+  font: 18px "Monospace","Courier","Consolas";
+  background-image: radial-gradient(ellipse at center, rgb(61,174,61) 100%, gray 0%);
+  box-shadow: 3px 3px 5px alpha(black, 0.5) inset;
+
+}
+#dialogLegendLabelRed{
+  background-image: radial-gradient(ellipse at center, rgb(237,39,39) 100%, gray 0%);
+  color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+#dialogLegendLabelPink{
+  background-image: radial-gradient(ellipse at center, rgb(219,121,206) 100%, gray 0%);
+  color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+#dialogLegendLabelDarkBlue {
+  background-image: radial-gradient(ellipse at center, rgb(29,79,222) 100%, gray 0%);
+  color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+#dialogLegendLabelLightBlue{
+  background-image: radial-gradient(ellipse at center, rgb(128,243,239) 100%, gray 0%);
+  color: black;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,46 @@
+
+when checking if x is a legal scrabble move , make x the middle of a 9x9 grid
+
+		        | y  | 
+		    ----+----+---
+		        | x  |   
+		    ----+----+---
+			| y  |
+
+
+		        |    | 
+		    ----+----+---
+		      y | x  | y 
+		    ----+----+---
+			|    |
+
+
+		        |  y | 
+		    ----+----+---
+		      y | x  | y 
+		    ----+----+---
+			|  y |
+
+opposites ok ^
+
+		        |    | 
+		    ----+----+---
+		        | x  | y 
+		    ----+----+---
+			|    |
+
+		        |    | 
+		    ----+----+---
+		      y | x  |  
+		    ----+----+---
+			| y  |
+
+ok ^
+
+		        | y  | y
+		    ----+----+---
+		        | x  | y 
+		    ----+----+---
+			|    |
+
+check if 3 squares are grouped around it like above 
