@@ -6,6 +6,5 @@ To compile it, dependencies are libcanberra (libcanberra-dev), glib-2.0 and libg
 
 The compiled result needs to be with the 'sounds', 'highscores', 'gameStyle' and 'dictionary' directories, for this I change the project properties> build targets> release field to the source directory.
 
-
-https://github.com/pigeonism/gtkScrabbleTest-Old/blob/master/example.png
+<img width="512" alt="example" src="https://github.com/pigeonism/gtkScrabbleTest-Old/blob/master/example.png">
 
